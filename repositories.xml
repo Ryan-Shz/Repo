@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<repositories>
+    <repository> <!-- 表示这个是一个仓库 -->
+        <repo>仓库地址</repo> <!-- 填写仓库地址 -->
+        <devbranch>开发分支</devbranch> <!-- 填写仓库当前开发分支 -->
+        <modules> <!-- 表示这个是仓库里的所有模块 -->
+            <module> <!-- 表示这是仓库里的一个模块 -->
+                <groupid>${mavenGroupId1}</groupid>
+                <artifactid>${mavenArtifactId1}</artifactid>
+                <version>${moduleVersion1}</version>
+            </module>
+            <module>
+                <groupid>${mavenGroupId2}</groupid>
+                <artifactid>${mavenArtifactId2}</artifactid>
+                <version>${moduleVersion2}</version>
+            </module>
+        </modules>
+        <!-- ...多个模块就写多个module -->
+    </repository>
+</repositories>
