@@ -9,7 +9,7 @@ class PluginToolsImpl implements Plugin<Project> {
 
     private static final def CONFIG_FILE = 'local.properties'
     private static final def CMD_PROPERTIES_PRE_BUILD = 'noBuild'
-    private static final def SUBMODULES_ROOT_DIR = 'submodules'
+    private static final def SUBMODULES_ROOT_DIR = 'repos'
     private static List<Repository> repositories = new ArrayList<>()
     private static final Set<Repository.Module> sourceCompileModules = new HashSet<>()
     private static final Set<Repository.Module> remoteCompileModules = new HashSet<>()
@@ -87,8 +87,7 @@ class PluginToolsImpl implements Plugin<Project> {
     }
 
     private static void insertCmdTask(Project project) {
-        Task cmdTask = project.tasks.create('cmd')
-        project.tasks.add(cmdTask)
+        project.tasks.register('cmd')
     }
 
     private static void loadSourceModules(Project project) {
